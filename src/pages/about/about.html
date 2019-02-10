@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About Me
+    </ion-title>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+<ion-content padding>
+    <button ion-button full (click)="openMenuOne()">Add</button>
+
+    <ion-card >
+
+      <ion-navbar color = "primary">
+        <ion-title >Information about me as an individual</ion-title>
+      </ion-navbar>
+
+              <ion-item>
+                <ion-label stacked color ="primary">Please provide a brief one-line intro?</ion-label>
+                <ion-input type="text" #oneLine></ion-input>
+             </ion-item>
+
+
+                <ion-item>
+                  <ion-label color ="primary" stacked>Things I want you to know about me?</ion-label>
+                  <ion-input type="text" #know></ion-input>
+               </ion-item>
+
+                <ion-item>
+                  <ion-label color ="primary" >What is your highest education level?</ion-label>
+                  <ion-select [(ngModel)]="education" #edu>
+                    <ion-option value="n">Not applicable</ion-option>
+                    <ion-option value="e">Elementary school</ion-option>
+                    <ion-option value="m">Middle school</ion-option>
+                    <ion-option value="h">High School</ion-option>
+                    <ion-option value="c">College or beyond</ion-option>
+                  </ion-select>
+                </ion-item>
+   
+      <button ion-button full (click)="recordOne()">Submit</button>
+    </ion-card>
+
+
+
+</ion-content>
